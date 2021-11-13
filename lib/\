@@ -1,0 +1,117 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: FifthDesign(),
+    ),
+  );
+}
+
+class FifthDesign extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xff131517),
+
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30,
+                  vertical: 50,
+                ),
+                child: CircleAvatar(
+                  radius: 28,
+                  backgroundColor: Color(0xff0f1112),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.arrow_back,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+              Spacer(),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                child: CircleAvatar(
+                  radius: 28,
+                  backgroundColor: Color(0xff0f1112),
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.favorite_border,
+                      size: 30,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ], //childremn
+          ), //firstrow
+          Stack(
+            children: [
+              Container(
+                padding: EdgeInsets.all(96),
+                height: 390,
+                width: 590,
+                decoration: BoxDecoration(
+                  color: Color(0xff131517),
+                  shape: BoxShape.circle,
+                  border: Border.all(
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+	      Positioned(
+			      bottom:198,
+			      left:62,
+			      child:
+	      Container(
+             // padding: EdgeInsets.all(12),
+              height: 300,
+	      width:300,
+              decoration: BoxDecoration(
+              /*  image: DecorationImage(
+				 fit: BoxFit.fill,
+                  image: AssetImage('assets/watchbg.png'),
+                ),*/
+                // height:68,),
+                color: Color(0xff5A5A5A),
+                shape: BoxShape.circle,
+                border: Border.all(
+                  color: Colors.white,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.white,
+                    blurRadius: 8,
+                    spreadRadius: 4,
+                    offset: Offset(
+                      1,
+                      9,
+                    ),
+                  ),
+                ],
+              ),
+            ),),
+	    Container(
+			    padding:EdgeInsets.only(bottom:24,),
+			    
+			   child:
+			    
+			    
+	    Image.asset('assets/watchbg.png',scale:1),),
+            ],
+          )
+        ], //children
+      ), //Column
+    );
+  }
+}
